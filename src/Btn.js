@@ -1,27 +1,43 @@
 import React, { useState } from "react";
+import style from './app.css'
+import Counter from './Counter'
 
 function Btn({ props }) {
   const [count, setCount] = useState(props);
 
-  function handleClick() {
-    setCount(count + 1);
+  function handleClick(event) {
+    const value = parseInt(event.target.innerText);
+    setCount(count + value);
   }
 
   return (
+    <>
     <div
-      className="btn"
-      style={{
-        width: "200px",
-        backgroundColor: "#c9c9c9",
-        padding: "15px",
-        textAlign: "center",
-        margin: "auto",
-        cursor: "pointer"
-      }}
-      onClick={handleClick}
+    className="btn"
+    onClick={handleClick}
     >
-      {count}
+      +1
     </div>
+    <div
+    className="btn"
+    onClick={handleClick}
+    >
+      +10
+    </div>
+    <div
+    className="btn"
+    onClick={handleClick}
+    >
+      -100
+    </div>
+    <div
+    className="btn"
+    onClick={handleClick}
+    >
+      +25
+    </div>
+    <Counter props = {count}/>
+    </>
   );
 }
 

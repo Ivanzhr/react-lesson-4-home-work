@@ -1,0 +1,16 @@
+.btn, .count {
+    width: 100px;
+    margin: 20px auto;
+    background-color: #c9c9c9;
+    padding: 10px;
+    text-align: center;
+}
+
+.count {
+    background-color: #e4e3e3;
+}
+
+.btn:hover {
+    cursor: pointer;
+}
+     

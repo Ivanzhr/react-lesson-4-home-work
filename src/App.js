@@ -2,7 +2,7 @@ import Btn from './Btn'
 function App() {
   return (
     <>
-     <Btn props = {1}/>
+     <Btn props = {+1}/>
     </>
   );
 }
